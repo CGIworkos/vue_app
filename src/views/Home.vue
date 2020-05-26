@@ -43,6 +43,7 @@ export default {
     async refresh() {
       this.loading = true
       this.currency = await this.$store.dispatch('fetchCurrency')
+      
       this.loading = false
     }
   },
