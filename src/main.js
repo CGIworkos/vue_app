@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import dateFilter from '@/filters/date.filter'
 import messagePlugin from '@/utils/message.plugin.js'
+import Loader from '@/components/app/Loader'
 import './registerServiceWorker'
 import'materialize-css/dist/js/materialize.min.js'
 
@@ -17,6 +18,7 @@ Vue.config.productionTip = false
 Vue.use(messagePlugin)
 Vue.use(Vuelidate)
 Vue.filter('date', dateFilter)
+Vue.component('Loader', Loader)
 
 firebase.initializeApp({
   apiKey: "AIzaSyB7R-GBlTn5BZU5ba7MS45dYgKbwBryrGo",
