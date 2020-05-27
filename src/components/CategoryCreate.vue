@@ -34,7 +34,7 @@
             v-if="$v.limit.$dirty && !$v.limit.minValue"
             class="helper-text invalid"
           >
-            Минимальная значение {{$v.limit.$params.minValue.min}}
+            Минимальное значение {{$v.limit.$params.minValue.min}}
           </span>
         </div>
 
