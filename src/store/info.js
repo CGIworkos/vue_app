@@ -24,8 +24,7 @@ export default {
         throw e
       }
     },
-
-    async fetchInfo({ dispatch, commit }) {
+    async fetchInfo({dispatch, commit}) {
       try {
         const uid = await dispatch('getUid')
         const info = (await firebase.database().ref(`/users/${uid}/info`).once('value')).val()
@@ -36,7 +35,6 @@ export default {
       }
     }
   },
-
   getters: {
     info: s => s.info
   }

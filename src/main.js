@@ -6,10 +6,10 @@ import store from './store'
 import dateFilter from '@/filters/date.filter'
 import currencyFilter from '@/filters/currency.filter'
 import tooltipDirective from '@/directives/tooltip.directive'
-import messagePlugin from '@/utils/message.plugin.js'
+import messagePlugin from '@/utils/message.plugin'
 import Loader from '@/components/app/Loader'
 import './registerServiceWorker'
-import'materialize-css/dist/js/materialize.min.js'
+import 'materialize-css/dist/js/materialize.min'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -36,14 +36,14 @@ firebase.initializeApp({
 
 let app
 
-firebase.auth().onAuthStateChanged(()  => {
+firebase.auth().onAuthStateChanged(() => {
   if (!app) {
     app = new Vue({
       router,
       store,
       render: h => h(App)
     }).$mount('#app')
-  }  
+  }
 })
 
 
